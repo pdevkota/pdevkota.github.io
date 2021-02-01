@@ -98,9 +98,9 @@
   document.addEventListener("DOMContentLoaded", loaded, false);
 
   function disableAllButtons(form) {
-    var buttons = form.querySelectorAll("button");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
+    var buttons = form.querySelector(".btn-primary");
+    if (buttons) {
+        buttons.value = "Processing..."
     }
   }
 })();
